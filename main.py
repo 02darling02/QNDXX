@@ -27,7 +27,7 @@ def everyWeek(cookie):
         "Cookie": cookie
     }
     data = {
-        "txtid": time.localtime()[7] // 7 + 44
+        "txtid": time.localtime()[7] // 7 + 45
     }
     try:
         r = requests.post(url, data=json.dumps(data), headers=headers, proxies={"http": None, "https": None})
