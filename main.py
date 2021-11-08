@@ -19,17 +19,10 @@ def sign(task, cookie):
 
 
 def main(event, context):
-    """
-    腾讯云函数程序入口
-    :param event: 可省略
-    :param context: 可省略
-    :return: 可省略
-    """
     with open('./cookie.json', 'r', encoding='utf-8') as f:
-        cookies = load(f)
-    for cookie in cookies:
-        sign("xuexi", cookie)
-        sign("user/qiandao", cookie)
+        for cookie in load(f):
+            sign("xuexi", cookie)
+            sign("user/qiandao", cookie)
 
 
 if __name__ == '__main__':
