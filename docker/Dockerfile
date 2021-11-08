@@ -17,9 +17,7 @@ RUN apk add --no-cache -U tzdata \
 && rm -rf ~/.cache/pip \
 && mkdir repo \
 && git clone https://github.com/chiupam/QNDXX.git /repo \
-&& crontab /repo/docker/cron.sh \
-&& mkdir data \
-&& if [[ ! -f /data/cookie.json ]]; then cp /repo/cookie.json /data ; fi
+&& crontab /repo/docker/cron.sh
 
 WORKDIR /data
 
