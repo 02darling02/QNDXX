@@ -28,7 +28,7 @@ jobs:
         with:
           push: true
           file: ./docker/Dockerfile
-          tags: chiupam/QNDXX:latest
+          tags: chiupam/qndxx:latest
           platforms: linux/amd64, linux/arm64
 
       - name: Delete Workflow Runs
